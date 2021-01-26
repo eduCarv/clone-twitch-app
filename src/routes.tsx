@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 
 
 import Following from './pages/Following';
@@ -39,46 +39,35 @@ const Routes: React.FC = () => (
         activeTintColor: colors.purple,
       }}
     >
-      <Screen name="Following" component={Following} options={{
+      <Screen name="Seguindo" component={Following} options={{
         tabBarIcon: ({ size, focused }) => {
           return (
             <Ionicons 
               name="md-heart"
               size={size}
-              color={focused ? colors.purple : colors.black}
+              color={focused ? colors.purple_dark : colors.black}
             />
           );
         }
       }} />
-      <Screen name="Discover" component={ComingSoon} options={{
+      <Screen name="Descubra" component={ComingSoon} options={{
         tabBarIcon: ({ size, focused }) => {
           return (
             <MaterialCommunityIcons 
               name="compass-outline"
               size={size}
-              color={focused ? colors.purple : colors.black}
+              color={focused ? colors.purple_dark : colors.black}
             />
           );
         }
       }} />
-      <Screen name="Browse" component={ComingSoon} options={{
+      <Screen name="Procurar" component={ComingSoon} options={{
         tabBarIcon: ({ size, focused }) => {
           return (
-            <Ionicons 
-              name="md-browsers"
+            <Feather 
+              name="copy"
               size={size}
-              color={focused ? colors.purple : colors.black}
-            />
-          );
-        }
-      }} />
-      <Screen name="Esports" component={ComingSoon} options={{
-        tabBarIcon: ({ size, focused }) => {
-          return (
-            <MaterialCommunityIcons
-              name="trophy-outline"
-              size={size}
-              color={focused ? colors.purple : colors.black}
+              color={focused ? colors.purple_dark : colors.black}
             />
           );
         }

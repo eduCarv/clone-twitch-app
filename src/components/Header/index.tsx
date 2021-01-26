@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons, MaterialIcons, Feather } from '@expo/vector-icons';
+import { MaterialCommunityIcons, MaterialIcons, Feather, AntDesign } from '@expo/vector-icons';
 import React from 'react';
 import colors from '../../styles/colors';
 import { Container, Avatar, OnlineStatus, RightSide, Button } from './styles';
@@ -12,8 +12,16 @@ const Header: React.FC = () => {
 
       <RightSide>
         <Button>
-          <MaterialIcons 
-            name="notifications-none"
+          <AntDesign 
+            name="videocamera"
+            size={26}
+            color={colors.black}
+          />
+        </Button>
+
+        <Button>
+          <Feather 
+            name="inbox"
             size={26}
             color={colors.black}
           />

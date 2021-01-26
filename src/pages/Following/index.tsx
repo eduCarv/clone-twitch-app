@@ -4,6 +4,7 @@ import Heading from "../../components/Heading";
 import Title from "../../components/Title";
 import CategoryList from "../../components/CategoryList";
 import StreamList from "../../components/StreamList";
+import StreamListRecommended from "../../components/StreamListRecommended";
 import ChannelList from "../../components/ChannelList";
 
 import { Wrapper, Container, Main } from "./styles";
@@ -21,36 +22,44 @@ const Following: React.FC = () => {
     const items: Item[] = [
       {
         key: 'PAGE_HEADING',
-        render: () => <Heading>Following</Heading>,
+        render: () => <Heading>Seguindo</Heading>,
       },
 
       {
         key: 'FOLLOWED_CATEGORIES',
-        render: () => <Title>Followed Categories</Title>,
+        render: () => <Title>Categorias Seguidas</Title>,
         isTitle: true,
       },
       { key: 'c1', render: () => <CategoryList /> },
 
       {
         key: 'LIVE_CHANNELS',
-        render: () => <Title>Live Channels</Title>,
+        render: () => <Title>Canais ao Vivo</Title>,
         isTitle: true,
       },
       { key: 'c2', render: () => <StreamList /> },
 
       {
-        key: 'CONTINUE_WATCHING',
-        render: () => <Title>Continue Watching</Title>,
+        key: 'RECOMMENDED_CHANNELS',
+        render: () => <Title>Canais Recomendados</Title>,
         isTitle: true,
       },
-      { key: 'c3', render: () => <StreamList /> },
+      { key: 'c3', render: () => <StreamListRecommended /> },
+
+      {
+        key: 'CONTINUE_WATCHING',
+        render: () => <Title>Continuar Assistindo</Title>,
+        isTitle: true,
+      },
+      { key: 'c4', render: () => <StreamList /> },
       
       {
         key: 'OFFLINE_CHANNELS',
-        render: () => <Title>Offline Channels</Title>,
+        render: () => <Title>Canais Offline</Title>,
         isTitle: true,
       },
-      { key: 'c4', render: () => <ChannelList /> },
+      { key: 'c5', render: () => <ChannelList /> },
+      
     ];
 
     // Array que contém apenas os indeces dos elementos que são títulos

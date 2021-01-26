@@ -3,6 +3,7 @@ import colors from '../../styles/colors';
 
 export const Container = styled.View`
     padding: 10px 0 20px;
+    flex: 1;
 `;
 
 export const HeadingText = styled.Text`
